@@ -1,5 +1,6 @@
 
 resource "aws_quicksight_account_subscription" "subscription" {
+  # account name must be unique and cannot be reused even after subscription is deleted
   account_name          = "quicksight-demo-${formatdate("YYYYMMDDhhmm", timestamp())}"
   authentication_method = "IAM_ONLY" # valid values: IAM_AND_QUICKSIGHT, IAM_ONLY and ACTIVE_DIRECTORY
   edition               = "ENTERPRISE"
@@ -21,12 +22,6 @@ resource "aws_quicksight_account_subscription" "subscription" {
   }
 }
 
-/*
-resource "aws_quicksight_namespace" "default" {
-  namespace             = "default"
-}
-*/
-
 resource "aws_quicksight_user" "user1" {
   iam_arn               = var.quicksight_user_iam_arn
   email                 = var.quicksight_user_email
@@ -40,19 +35,6 @@ resource "aws_quicksight_user" "user1" {
   
   depends_on            = [ aws_quicksight_account_subscription.subscription ]
 }
-
-/*
-data "external" "delete_default_datasources" {
-  depends_on            = [
-  ]
-
-  program               = [
-    "aws", "servicecatalog", "list-accepted-portfolio-shares",
-    "--output", "json",
-    "--query", "PortfolioDetails[?ProviderName==`Amazon SageMaker`] | [0]"
-  ]
-}
-*/
 
 # ----
 
