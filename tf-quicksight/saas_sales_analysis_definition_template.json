@@ -1,0 +1,468 @@
+{
+    "ThemeArn": "arn:aws:quicksight::aws:theme/SEASIDE",
+    "Definition": {
+        "DataSetIdentifierDeclarations": [
+            {
+                "Identifier": "data-set-01",
+                "DataSetArn": "${dataset_arn}"
+            }
+        ],
+        "Sheets": [
+            {
+                "SheetId": "25083a38-69b6-48d1-8210-3395ceafd665",
+                "Name": "Sales KPIs",
+                "Visuals": [
+                    {
+                        "BarChartVisual": {
+                            "VisualId": "97199d89-d550-4113-bd0b-d10016a65e5a",
+                            "Title": {
+                                "Visibility": "VISIBLE"
+                            },
+                            "Subtitle": {
+                                "Visibility": "VISIBLE"
+                            },
+                            "ChartConfiguration": {
+                                "FieldWells": {
+                                    "BarChartAggregatedFieldWells": {
+                                        "Category": [
+                                            {
+                                                "CategoricalDimensionField": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Customer.0.1693326759146",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "data-set-01",
+                                                        "ColumnName": "Customer"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "Values": [
+                                            {
+                                                "NumericalMeasureField": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Profit.1.1693326759146",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "data-set-01",
+                                                        "ColumnName": "Profit"
+                                                    },
+                                                    "AggregationFunction": {
+                                                        "SimpleNumericalAggregation": "SUM"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "Colors": []
+                                    }
+                                },
+                                "SortConfiguration": {
+                                    "CategoryItemsLimit": {
+                                        "OtherCategories": "INCLUDE"
+                                    },
+                                    "ColorItemsLimit": {
+                                        "OtherCategories": "INCLUDE"
+                                    },
+                                    "SmallMultiplesLimitConfiguration": {
+                                        "OtherCategories": "INCLUDE"
+                                    }
+                                },
+                                "Orientation": "HORIZONTAL",
+                                "BarsArrangement": "CLUSTERED",
+                                "DataLabels": {
+                                    "Visibility": "HIDDEN",
+                                    "Overlap": "DISABLE_OVERLAP"
+                                },
+                                "Tooltip": {
+                                    "TooltipVisibility": "VISIBLE",
+                                    "SelectedTooltipType": "DETAILED",
+                                    "FieldBasedTooltip": {
+                                        "AggregationVisibility": "HIDDEN",
+                                        "TooltipTitleType": "PRIMARY_VALUE",
+                                        "TooltipFields": [
+                                            {
+                                                "FieldTooltipItem": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Customer.0.1693326759146",
+                                                    "Visibility": "VISIBLE"
+                                                }
+                                            },
+                                            {
+                                                "FieldTooltipItem": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Profit.1.1693326759146",
+                                                    "Visibility": "VISIBLE"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "Actions": [],
+                            "ColumnHierarchies": []
+                        }
+                    },
+                    {
+                        "PieChartVisual": {
+                            "VisualId": "54aeb59b-1fec-4c57-9ab3-05ec5e614901",
+                            "Title": {
+                                "Visibility": "VISIBLE"
+                            },
+                            "Subtitle": {
+                                "Visibility": "VISIBLE"
+                            },
+                            "ChartConfiguration": {
+                                "FieldWells": {
+                                    "PieChartAggregatedFieldWells": {
+                                        "Category": [
+                                            {
+                                                "DateDimensionField": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Order Date.0.1693340184006",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "data-set-01",
+                                                        "ColumnName": "Order Date"
+                                                    },
+                                                    "HierarchyId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Order Date.0.1693340184006"
+                                                }
+                                            }
+                                        ],
+                                        "Values": []
+                                    }
+                                },
+                                "SortConfiguration": {
+                                    "CategoryItemsLimit": {
+                                        "OtherCategories": "INCLUDE"
+                                    },
+                                    "SmallMultiplesLimitConfiguration": {
+                                        "OtherCategories": "INCLUDE"
+                                    }
+                                },
+                                "DonutOptions": {
+                                    "ArcOptions": {
+                                        "ArcThickness": "MEDIUM"
+                                    },
+                                    "DonutCenterOptions": {
+                                        "LabelVisibility": "VISIBLE"
+                                    }
+                                },
+                                "DataLabels": {
+                                    "Visibility": "VISIBLE",
+                                    "Overlap": "DISABLE_OVERLAP"
+                                },
+                                "Tooltip": {
+                                    "TooltipVisibility": "VISIBLE",
+                                    "SelectedTooltipType": "BASIC",
+                                    "FieldBasedTooltip": {
+                                        "AggregationVisibility": "HIDDEN",
+                                        "TooltipTitleType": "PRIMARY_VALUE",
+                                        "TooltipFields": [
+                                            {
+                                                "FieldTooltipItem": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Order Date.0.1693340184006",
+                                                    "Visibility": "VISIBLE"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "Actions": [],
+                            "ColumnHierarchies": [
+                                {
+                                    "DateTimeHierarchy": {
+                                        "HierarchyId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Order Date.0.1693340184006"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "LineChartVisual": {
+                            "VisualId": "0e493886-4a9b-439f-b749-68e819b44ce1",
+                            "Title": {
+                                "Visibility": "VISIBLE"
+                            },
+                            "Subtitle": {
+                                "Visibility": "VISIBLE"
+                            },
+                            "ChartConfiguration": {
+                                "FieldWells": {
+                                    "LineChartAggregatedFieldWells": {
+                                        "Category": [
+                                            {
+                                                "DateDimensionField": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Order Date.1.1693340542088",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "data-set-01",
+                                                        "ColumnName": "Order Date"
+                                                    },
+                                                    "HierarchyId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Order Date.1.1693340542088"
+                                                }
+                                            }
+                                        ],
+                                        "Values": [
+                                            {
+                                                "NumericalMeasureField": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Profit.0.1693340540578",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "data-set-01",
+                                                        "ColumnName": "Profit"
+                                                    },
+                                                    "AggregationFunction": {
+                                                        "SimpleNumericalAggregation": "SUM"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "Colors": []
+                                    }
+                                },
+                                "SortConfiguration": {
+                                    "CategorySort": [
+                                        {
+                                            "FieldSort": {
+                                                "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Order Date.1.1693340542088",
+                                                "Direction": "DESC"
+                                            }
+                                        }
+                                    ],
+                                    "CategoryItemsLimitConfiguration": {
+                                        "OtherCategories": "INCLUDE"
+                                    },
+                                    "ColorItemsLimitConfiguration": {
+                                        "OtherCategories": "INCLUDE"
+                                    },
+                                    "SmallMultiplesLimitConfiguration": {
+                                        "OtherCategories": "INCLUDE"
+                                    }
+                                },
+                                "Type": "STACKED_AREA",
+                                "DataLabels": {
+                                    "Visibility": "HIDDEN",
+                                    "Overlap": "DISABLE_OVERLAP"
+                                },
+                                "Tooltip": {
+                                    "TooltipVisibility": "VISIBLE",
+                                    "SelectedTooltipType": "BASIC",
+                                    "FieldBasedTooltip": {
+                                        "AggregationVisibility": "HIDDEN",
+                                        "TooltipTitleType": "PRIMARY_VALUE",
+                                        "TooltipFields": [
+                                            {
+                                                "FieldTooltipItem": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Order Date.1.1693340542088",
+                                                    "Visibility": "VISIBLE"
+                                                }
+                                            },
+                                            {
+                                                "FieldTooltipItem": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Profit.0.1693340540578",
+                                                    "Visibility": "VISIBLE"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "Actions": [],
+                            "ColumnHierarchies": [
+                                {
+                                    "DateTimeHierarchy": {
+                                        "HierarchyId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Order Date.1.1693340542088"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "GeospatialMapVisual": {
+                            "VisualId": "d24a31ea-99a2-4d9a-a0ed-9b9e0577d9b3",
+                            "Title": {
+                                "Visibility": "VISIBLE"
+                            },
+                            "Subtitle": {
+                                "Visibility": "HIDDEN"
+                            },
+                            "ChartConfiguration": {
+                                "FieldWells": {
+                                    "GeospatialMapAggregatedFieldWells": {
+                                        "Geospatial": [
+                                            {
+                                                "CategoricalDimensionField": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Country.0.1693344009861",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "data-set-01",
+                                                        "ColumnName": "Country"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "Values": [
+                                            {
+                                                "NumericalMeasureField": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Sales.1.1693344013628",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "data-set-01",
+                                                        "ColumnName": "Sales"
+                                                    },
+                                                    "AggregationFunction": {
+                                                        "SimpleNumericalAggregation": "SUM"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "Colors": []
+                                    }
+                                },
+                                "Tooltip": {
+                                    "TooltipVisibility": "VISIBLE",
+                                    "SelectedTooltipType": "BASIC",
+                                    "FieldBasedTooltip": {
+                                        "AggregationVisibility": "HIDDEN",
+                                        "TooltipTitleType": "PRIMARY_VALUE",
+                                        "TooltipFields": [
+                                            {
+                                                "FieldTooltipItem": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Country.0.1693344009861",
+                                                    "Visibility": "VISIBLE"
+                                                }
+                                            },
+                                            {
+                                                "FieldTooltipItem": {
+                                                    "FieldId": "7c868aaf-af20-4032-94d6-9046ac3dde92.Sales.1.1693344013628",
+                                                    "Visibility": "VISIBLE"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "WindowOptions": {
+                                    "Bounds": {
+                                        "North": 85.05112899999992,
+                                        "South": -85.05112900000023,
+                                        "West": -290.4566202991007,
+                                        "East": 303.6959304991035
+                                    },
+                                    "MapZoomMode": "AUTO"
+                                },
+                                "MapStyleOptions": {
+                                    "BaseMapStyle": "STREET"
+                                }
+                            },
+                            "ColumnHierarchies": [],
+                            "Actions": []
+                        }
+                    }
+                ],
+                "Layouts": [
+                    {
+                        "Configuration": {
+                            "GridLayout": {
+                                "Elements": [
+                                    {
+                                        "ElementId": "97199d89-d550-4113-bd0b-d10016a65e5a",
+                                        "ElementType": "VISUAL",
+                                        "ColumnIndex": 0,
+                                        "ColumnSpan": 18,
+                                        "RowIndex": 0,
+                                        "RowSpan": 11
+                                    },
+                                    {
+                                        "ElementId": "54aeb59b-1fec-4c57-9ab3-05ec5e614901",
+                                        "ElementType": "VISUAL",
+                                        "ColumnIndex": 18,
+                                        "ColumnSpan": 18,
+                                        "RowIndex": 0,
+                                        "RowSpan": 11
+                                    },
+                                    {
+                                        "ElementId": "0e493886-4a9b-439f-b749-68e819b44ce1",
+                                        "ElementType": "VISUAL",
+                                        "ColumnSpan": 18,
+                                        "RowSpan": 12
+                                    },
+                                    {
+                                        "ElementId": "d24a31ea-99a2-4d9a-a0ed-9b9e0577d9b3",
+                                        "ElementType": "VISUAL",
+                                        "ColumnSpan": 18,
+                                        "RowSpan": 12
+                                    }
+                                ],
+                                "CanvasSizeOptions": {
+                                    "ScreenCanvasSizeOptions": {
+                                        "ResizeOption": "FIXED",
+                                        "OptimizedViewPortWidth": "1600px"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "ContentType": "INTERACTIVE"
+            }
+        ],
+        "CalculatedFields": [],
+        "ParameterDeclarations": [],
+        "FilterGroups": [
+            {
+                "FilterGroupId": "bb26c9f1-3df1-497d-9335-bcc7f9dec17d",
+                "Filters": [
+                    {
+                        "RelativeDatesFilter": {
+                            "FilterId": "b96c4a37-dcdb-4882-8451-1b4fb04396cb",
+                            "Column": {
+                                "DataSetIdentifier": "data-set-01",
+                                "ColumnName": "Order Date"
+                            },
+                            "AnchorDateConfiguration": {
+                                "AnchorOption": "NOW"
+                            },
+                            "MinimumGranularity": "DAY",
+                            "TimeGranularity": "MONTH",
+                            "RelativeDateType": "THIS",
+                            "NullOption": "NON_NULLS_ONLY"
+                        }
+                    }
+                ],
+                "ScopeConfiguration": {
+                    "SelectedSheets": {
+                        "SheetVisualScopingConfigurations": [
+                            {
+                                "SheetId": "25083a38-69b6-48d1-8210-3395ceafd665",
+                                "Scope": "SELECTED_VISUALS",
+                                "VisualIds": [
+                                    "54aeb59b-1fec-4c57-9ab3-05ec5e614901"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "Status": "ENABLED",
+                "CrossDataset": "SINGLE_DATASET"
+            }
+        ],
+        "AnalysisDefaults": {
+            "DefaultNewSheetConfiguration": {
+                "InteractiveLayoutConfiguration": {
+                    "Grid": {
+                        "CanvasSizeOptions": {
+                            "ScreenCanvasSizeOptions": {
+                                "ResizeOption": "FIXED",
+                                "OptimizedViewPortWidth": "1600px"
+                            }
+                        }
+                    }
+                },
+                "SheetContentType": "INTERACTIVE"
+            }
+        }
+    },
+    "Permissions": [
+        {
+            "Principal": "${quicksight_user_arn}",
+            "Actions": [
+                "quicksight:RestoreAnalysis",
+                "quicksight:UpdateAnalysisPermissions",
+                "quicksight:DeleteAnalysis",
+                "quicksight:DescribeAnalysisPermissions",
+                "quicksight:QueryAnalysis",
+                "quicksight:DescribeAnalysis",
+                "quicksight:UpdateAnalysis"
+            ]
+        }
+    ]
+}
